@@ -17,7 +17,7 @@
 - [VonHeikemen/lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
 
 ***Git***
-- [tpope/vim-fugitive]([tpope/vim-fugitive](https://github.com/tpope/vim-fugitive))
+- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
 
 ***Other***
 - [mbbill/undotree](https://github.com/mbbill/undotree)
