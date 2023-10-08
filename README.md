@@ -2,7 +2,7 @@
 ***Plugin Manager***
 - [wbthomason/packer](https://github.com/wbthomason/packer.nvim)
 
-***Colorscheme***
+***Color Scheme***
 - [drewtempelmeyer/palenight.vim](https://github.com/drewtempelmeyer/palenight.vim)
 
 ***Navigation***
