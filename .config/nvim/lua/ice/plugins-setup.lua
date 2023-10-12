@@ -31,7 +31,6 @@ return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
 
-  --use("blue71/vim-nightfly-guicolors")
   use("drewtempelmeyer/palenight.vim")
 
   use {
