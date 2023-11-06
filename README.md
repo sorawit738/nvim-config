@@ -1,3 +1,8 @@
+# Neoim Configuration
+**<em>Important<em/>** this my current neovim init.lua.
+
+Cloning this repository will prompt you to install plugins and language servers via Mason and Treesitter.
+
 # Plugins
 ***Plugin Manager***
 - [wbthomason/packer](https://github.com/wbthomason/packer.nvim)
