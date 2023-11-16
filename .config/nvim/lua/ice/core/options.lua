@@ -64,3 +64,20 @@ vim.api.nvim_set_keymap('i', "''", "''", { noremap = true })
 vim.api.nvim_set_keymap('i', '"', '""<Left>', { noremap = true })
 vim.api.nvim_set_keymap('i', '""<CR>', '""<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '""', '""', { noremap = true })
+
+vim.api.nvim_exec([[
+  " C++ mappings
+  autocmd FileType cpp nnoremap <buffer><F9> :w <bar> :term g++ -std=c++14 %:p -o %:p:r -Wl,--stack,268435456 && %:p:r<CR>
+  autocmd FileType cpp nnoremap <buffer><F10> :w <bar> :term %:p:r<CR>
+  autocmd FileType cpp nnoremap <buffer><C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR>
+
+  " Python mappings
+  autocmd FileType python nnoremap <buffer><F9> :w <bar> :term python3 %:p<CR>
+  autocmd FileType python nnoremap <buffer><F10> :w <bar> :term python3 %:p<CR>
+  autocmd FileType python nnoremap <buffer><C-C> :s/^\(\s*\)/\1#<CR> :s/^\(\s*\)###/\1<CR>
+
+  " Java mappings
+  autocmd FileType java nnoremap <buffer><F9> :w <bar> :term javac %:p && java %:p:r<CR>
+  autocmd FileType java nnoremap <buffer><F10> :w <bar> :term java %:p:r<CR>
+  autocmd FileType java nnoremap <buffer><C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR>
+]], false)
