@@ -7,10 +7,13 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
     'clangd',
+    'pyre',
     'jdtls',
     'lua_ls',
-    'pyre',
     'pylsp',
+    'html',
+    'cssls',
+    'tsserver'
   }
 })
 
@@ -30,6 +33,10 @@ require('lspconfig').clangd.setup{
   capabilities = capabilities,
   on_attach = on_attach
 }
+require('lspconfig').pyre.setup{
+  capabilities = capabilities,
+  on_attach = on_attach
+}
 require('lspconfig').jdtls.setup{
   capabilities = capabilities,
   on_attach = on_attach
@@ -42,7 +49,15 @@ require('lspconfig').pylsp.setup{
   capabilities = capabilities,
   on_attah = on_attach
 }
-require('lspconfig').pylsp.setup{
+require('lspconfig').html.setup{
   capabilities = capabilities,
-  on_attach = on_attach
+  on_attah = on_attach
+}
+require('lspconfig').cssls.setup{
+  capabilities = capabilities,
+  on_attah = on_attach
+}
+require('lspconfig').tsserver.setup{
+  capabilities = capabilities,
+  on_attah = on_attach
 }
