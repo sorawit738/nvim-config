@@ -18,7 +18,7 @@ vim.opt.smartcase = true
 
 vim.opt.cursorline = true
 
-vim.opt.termguicolors = true
+-- vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.signcolumn = "yes"
 
@@ -73,7 +73,6 @@ vim.api.nvim_exec([[
 
   " Python mappings
   autocmd FileType python nnoremap <buffer><F9> :w <bar> :term python3 %:p<CR>:startinsert<CR>
-  autocmd FileType python nnoremap <buffer><F10> :w <bar> :term python3 %:p<CR>:startinsert<CR>
   autocmd FileType python nnoremap <buffer><C-C> :s/^\(\s*\)/\1#<CR> :s/^\(\s*\)###/\1<CR>
 
   " Java mappings
