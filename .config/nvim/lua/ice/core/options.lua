@@ -65,7 +65,8 @@ vim.api.nvim_set_keymap('i', '"', '""<Left>', { noremap = true })
 vim.api.nvim_set_keymap('i', '""<CR>', '""<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '""', '""', { noremap = true })
 
-vim.api.nvim_exec([[
+vim.api.nvim_exec(
+  [[
   " C++ mappings
   autocmd FileType cpp nnoremap <buffer><F9> :w <bar> :term g++ -std=c++14 %:p -o %:p:r<CR>:startinsert<CR>
   autocmd FileType cpp nnoremap <buffer><F10> :w <bar> :term %:p:r && rm %:p:r<CR>:startinsert<CR>
@@ -76,7 +77,13 @@ vim.api.nvim_exec([[
   autocmd FileType python nnoremap <buffer><C-C> :s/^\(\s*\)/\1#<CR> :s/^\(\s*\)###/\1<CR>
 
   " Java mappings
-  autocmd FileType java nnoremap <buffer><F9> :w <bar> :term javac %:p && java %:p:r && rm %:p:r.class<CR>:startinsert<CR>
-  autocmd FileType java nnoremap <buffer><F10> :w <bar> :term java %:p:r && rm %:p:r.class<CR>:startinsert<CR>
+  autocmd FileType java nnoremap <buffer><F9> :w <bar> :term javac %:p<CR>:startinsert<CR>
+  autocmd FileType java nnoremap <buffer><F10> :w <bar> :term java %:p && rm %:p:r.class<CR>:startinsert<CR>
   autocmd FileType java nnoremap <buffer><C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR>
-]], false)
+
+  " Javascript mappings
+  autocmd FileType Javascript nnoremap <buffer><F9> :w <bar> :term node %:p<CR>:startinsert<CR>
+  autocmd FileType javascript nnoremap <buffer><C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR>
+]],
+  false
+)
